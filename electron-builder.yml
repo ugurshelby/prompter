@@ -1,0 +1,27 @@
+appId: com.prompter.app
+productName: Prompter
+directories:
+  buildResources: resources
+  output: release
+files:
+  - out/**
+  - package.json
+extraResources:
+  - from: knowledge
+    to: knowledge
+  - from: resources
+    to: .
+    filter:
+      - "tray*.png"
+      - "trayTemplate*.png"
+icon: resources/icon.png
+win:
+  target: nsis
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+mac:
+  target: dmg
+  category: public.app-category.developer-tools
+  # İmzasız kişisel kullanım; ilk açılışta sağ tık → Aç.
+  identity: null

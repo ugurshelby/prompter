@@ -1,0 +1,14 @@
+# Gizli anahtarlar
+.env
+.env.*
+!.env.example
+
+# Bağımlılıklar ve derleme çıktıları
+node_modules/
+out/
+release/
+dist/
+
+# Yerel araç ayarları
+.claude/
+.DS_Store
